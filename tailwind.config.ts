@@ -11,15 +11,14 @@ const config = {
     "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
-  // theme: {
-  //   container: {
-  //     center: true,
-  //     padding: "2rem",
-  //     screens: {
-  //       "2xl": "1400px",
-  //     },
-  //   },
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     screens: {
       xsm: { min: "200px", max: "639px" },
       sm: { min: "640px", max: "767px" },
