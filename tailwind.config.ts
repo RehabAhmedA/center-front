@@ -11,13 +11,22 @@ const config = {
     "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
+  // theme: {
+  //   container: {
+  //     center: true,
+  //     padding: "2rem",
+  //     screens: {
+  //       "2xl": "1400px",
+  //     },
+  //   },
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+    screens: {
+      xsm: { min: "200px", max: "639px" },
+      sm: { min: "640px", max: "767px" },
+      md: { min: "768px", max: "1023px" },
+      lg: { min: "1024px", max: "1399px" },
+      xl: { min: "1440px", max: "1535px" },
+      "2xl": { min: "1536px" },
     },
     extend: {
       colors: {
