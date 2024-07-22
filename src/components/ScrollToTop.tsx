@@ -3,6 +3,7 @@
 import type { FC } from "react";
 import { useState, useEffect } from "react";
 import { ArrowUpToLine } from "lucide-react";
+import { FaArrowAltCircleUp } from "react-icons/fa";
 
 import { Button } from "@/components/ui/button";
 
@@ -31,10 +32,10 @@ const ScrollToTop: FC = () => {
       {showTopBtn && (
         <Button
           onClick={goToTop}
-          className="fixed bottom-4 right-4 opacity-90 shadow-md"
+          className="z-50 fixed bottom-7 left-7 hover:text-background opacity-90 rounded-full h-14 w-14 shadow-md"
           size="icon"
         >
-          <ArrowUpToLine className="h-4 w-4" />
+          <FaArrowAltCircleUp className="h-14 w-14" />
         </Button>
       )}
     </>

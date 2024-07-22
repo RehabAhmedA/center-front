@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 };
 
 import ThemeProvider from "@/providers/theme-provider";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function RootLayout({
   children,
@@ -38,7 +39,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" enableSystem>
           <div className="relative flex min-h-screen flex-col">
             <div className="">{children}</div>
-            {/* <ScrollToTop /> */}
+            <ScrollToTop />
           </div>
           {/* <Toaster /> */}
         </ThemeProvider>
