@@ -32,7 +32,7 @@ const ScrollToTop: FC = () => {
       {showTopBtn && (
         <Button
           onClick={goToTop}
-          className="z-50 fixed bottom-7 left-7 hover:text-background opacity-90 rounded-full h-14 w-14 shadow-md"
+          className="z-50 fixed bottom-7 left-7 opacity-90 rounded-full h-14 w-14 shadow-md"
           size="icon"
         >
           <FaArrowAltCircleUp className="h-14 w-14" />

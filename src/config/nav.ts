@@ -7,22 +7,22 @@ export interface NavProps {
 export const navbarLinksList: NavProps[] = [
   {
     href: "/",
-    LabelEn: "Features",
+    LabelEn: "Home",
     labelAr: "الرئيسية",
   },
   {
-    href: "#testimonials",
+    href: "/#testimonials",
     LabelEn: "Testimonials",
-    labelAr: "الدورات",
+    labelAr: "المشاريع",
   },
   {
-    href: "#pricing",
+    href: "/#pricing",
     LabelEn: "Pricing",
-    labelAr: "البرامج التدربية",
+    labelAr: "الأخبار",
   },
   {
-    href: "#faq",
-    LabelEn: "FAQ",
+    href: "/about",
+    LabelEn: "About",
     labelAr: "نبذة عنا",
   },
 ];

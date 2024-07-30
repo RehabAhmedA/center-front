@@ -51,34 +51,6 @@ const MobileNavFragment: FC = () => {
               {labelAr}
             </Link>
           ))}
-          <div className="md:flex relative">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input
-              type="search"
-              placeholder="بحث عن دورات"
-              className="sm:w-14 md:w-40 rounded-lg bg-background pl-3"
-            />
-          </div>
-          {/* <Link
-            href="/login"
-            className={`border ${buttonVariants({
-              variant: "blue",
-              size: "sm",
-            })}`}
-            onClick={() => setIsOpen(false)}
-          >
-            تسجيل الدخول
-          </Link>
-          <Link
-            href="/register"
-            className={`border ${buttonVariants({
-              variant: "blue",
-              size: "sm",
-            })}`}
-            onClick={() => setIsOpen(false)}
-          >
-            انضم لنا
-          </Link> */}
         </nav>
       </SheetContent>
     </Sheet>

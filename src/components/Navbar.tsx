@@ -18,6 +18,7 @@ import { buttonVariants } from "@/components/ui/button";
 
 import MobileNavFragment from "@/components/MobileNavFragment";
 import ModeToggle from "@/components/mode-toggle";
+//import { LogoIcon } from "@/components/Icons";
 
 import { navbarLinksList, NavProps } from "@/config/nav";
 // import { siteConfig } from "@/config/site";
@@ -28,19 +29,19 @@ const Navbar: FC = () => {
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       {/* Change when lang chang */}
       <NavigationMenu className="mx-auto" dir="rtl">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between">
+        <NavigationMenuList className="container h-16 px-4 w-screen flex justify-between">
           {/* desktop */}
-          <div className="hidden md:flex">
+          <div className="xsm:hidden w-full flex items-center justify-between">
             <NavigationMenuItem className="font-bold flex">
               <Link
                 href="/"
-                className="hidden md:flex flex-row font-bold text-xl"
+                className="xsm:hidden flex flex-row font-bold text-xl"
               >
                 <Image
-                  src="/logo.ico"
+                  src="/logo.png"
                   className="rounded-full"
-                  width={40}
-                  height={40}
+                  width={70}
+                  height={70}
                   alt="logo"
                 />
                 {/* <LogoIcon /> */}
@@ -53,47 +54,24 @@ const Navbar: FC = () => {
                 <Link
                   href={route.href}
                   key={i}
-                  className={`text-[17px] p-2 ${buttonVariants({
-                    variant: "ghost",
-                  })}`}
+                  className={`text-[17px] text-muted-foreground hover:text-foreground p-2 ${buttonVariants(
+                    {
+                      variant: "ghost",
+                    }
+                  )}`}
                   // className={`text-[17px] p-2 font-extrabold`}
                 >
-                  {route.labelAr}
+                  <p className="font-bold">{route.labelAr}</p>
                 </Link>
               ))}
             </nav>
-            <div className="md:flex relative">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="بحث عن دورات"
-                className="sm:w-14 md:w-36 lg:w-56 rounded-lg bg-background pl-3 font-bold"
-              />
+            <div className="xsm:hidden flex items-center px-2">
+              <ModeToggle />
             </div>
-          </div>
-          <div className="hidden md:flex gap-2">
-            {/* <Link
-              href="/login"
-              className={`border ${buttonVariants({ variant: "blue" })}`}
-            >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              تسجيل الدخول
-            </Link>
-            <Link
-              href="/register"
-              className={`border ${buttonVariants({
-                variant: "blue",
-              })}`}
-            >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              انضم لنا
-            </Link> */}
-
-            <ModeToggle />
           </div>
 
           {/* mobile */}
-          <div className="w-screen flex justify-between md:hidden">
+          <div className="xsm:w-screen xsm:flex xsm:justify-between hidden">
             <div className="flex items-center justify-center">
               <MobileNavFragment />
             </div>
@@ -101,9 +79,9 @@ const Navbar: FC = () => {
               <Link href="/" className="font-bold text-base">
                 <Image
                   className="rounded-full"
-                  src="/logo.ico"
-                  width={40}
-                  height={40}
+                  src="/logo.png"
+                  width={60}
+                  height={60}
                   alt="logo"
                 />
                 {/* <LogoIcon /> */}
@@ -111,7 +89,9 @@ const Navbar: FC = () => {
               </Link>
             </div>
 
-            <ModeToggle />
+            <div className="flex items-center">
+              <ModeToggle />
+            </div>
           </div>
         </NavigationMenuList>
       </NavigationMenu>

@@ -17,14 +17,13 @@ let options: Intl.DateTimeFormatOptions = {
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <Navbar />
+      {/* <Navbar /> */}
       <Button className="">
         Hello {new Date().toLocaleString("ar-EG", options)}
       </Button>
       <Button variant="link">
         Hello {new Date().toLocaleString("ar-EG", options)}
       </Button>
-      <Footer />
     </main>
   );
 }

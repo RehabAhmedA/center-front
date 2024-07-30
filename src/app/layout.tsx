@@ -8,6 +8,9 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { fontSans } from "@/styles/fonts";
 
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/footer";
+
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -38,9 +41,11 @@ export default function RootLayout({
         {/* Don't set defaultTheme="light" */}
         <ThemeProvider attribute="class" enableSystem>
           <div className="relative flex min-h-screen flex-col">
+            <Navbar />
             <div className="">{children}</div>
             <ScrollToTop />
           </div>
+          <Footer />
           {/* <Toaster /> */}
         </ThemeProvider>
       </body>

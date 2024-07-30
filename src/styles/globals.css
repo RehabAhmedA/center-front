@@ -71,7 +71,7 @@ body,
 
 /* Green */
 
-/* @layer base {
+@layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -126,7 +126,7 @@ body,
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-} */
+}
 
 /*  Custom ( 177.22, 45%, 47.06% )  */
 /*  Green 
@@ -136,7 +136,7 @@ body,
   --primary : 142.1 76.2% 36.3%
 
 */
-@layer base {
+/* @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 177.22, 45%, 47.06%;
@@ -172,7 +172,7 @@ body,
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 9%;
     --popover-foreground: 0 0% 95%;
-    --primary: 142.1 70.6% 45.3%;
+    --primary: 177.22, 45%, 47.06%;
     --primary-foreground: 144.9 80.4% 10%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
@@ -191,7 +191,7 @@ body,
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
+} */
 
 @layer base {
   * {
