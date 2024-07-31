@@ -46,7 +46,7 @@ const MobileNavFragment: FC = () => {
               key={labelAr}
               href={href}
               onClick={() => setIsOpen(false)}
-              className={`font-bold ${buttonVariants({ variant: "ghost" })}`}
+              className={`font-bold hover:text-primary ${buttonVariants({ variant: "ghost" })}`}
             >
               {labelAr}
             </Link>

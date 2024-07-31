@@ -1,6 +1,8 @@
 "use client";
 
 import type { FC } from "react";
+// import { useRouter } from "next/router";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -25,6 +27,35 @@ import { navbarLinksList, NavProps } from "@/config/nav";
 // const { title } = siteConfig;
 
 const Navbar: FC = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // console.log(pathname);
+  // console.log(typeof pathname);
+
+  // const subpage = pathname.split("/")?.[1];
+
+  // console.log(subpage);
+
+  // const activeLink = (type: string) => {
+  //   let classes = `text-[17px] text-muted-foreground hover:text-primary p-2
+  //   ${buttonVariants({
+  //     variant: "ghost",
+  //     size: "lg",
+  //   })}`;
+  //   console.log(type);
+  //   if (type === subpage) {
+
+  //     classes = `text-[17px] text-muted-foreground hover:text-primary p-2
+  //   ${buttonVariants({
+  //     variant: "ghost",
+  //     size: "lg",
+  //   })} bg-green-500`;
+  //   }
+
+  //   return classes;
+  // };
+
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       {/* Change when lang chang */}
@@ -49,17 +80,19 @@ const Navbar: FC = () => {
               </Link>
             </NavigationMenuItem>
 
-            <nav className="md:flex">
+            <nav className="xsm:hidden flex">
               {navbarLinksList.map((route: NavProps, i) => (
                 <Link
-                  href={route.href}
                   key={i}
-                  className={`text-[17px] text-muted-foreground hover:text-foreground p-2 ${buttonVariants(
-                    {
-                      variant: "ghost",
-                    }
-                  )}`}
-                  // className={`text-[17px] p-2 font-extrabold`}
+                  href={route.href}
+                  //className={activeLink(route.href)}
+                  className={`${
+                    pathname === route.href
+                      ? `bg-primary/70 hover:text-background`
+                      : `hover:text-primary`
+                  }
+                  text-[17px] text-muted-foreground rounded-md px-4 py-2
+                  `}
                 >
                   <p className="font-bold">{route.labelAr}</p>
                 </Link>
